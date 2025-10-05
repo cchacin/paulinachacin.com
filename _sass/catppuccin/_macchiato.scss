@@ -1,0 +1,76 @@
+// Catppuccin Macchiato (Dark Theme)
+// https://github.com/catppuccin/catppuccin
+
+$macchiato-rosewater: #f4dbd6;
+$macchiato-flamingo: #f0c6c6;
+$macchiato-pink: #f5bde6;
+$macchiato-mauve: #c6a0f6;
+$macchiato-red: #ed8796;
+$macchiato-maroon: #ee99a0;
+$macchiato-peach: #f5a97f;
+$macchiato-yellow: #eed49f;
+$macchiato-green: #a6da95;
+$macchiato-teal: #8bd5ca;
+$macchiato-sky: #91d7e3;
+$macchiato-sapphire: #7dc4e4;
+$macchiato-blue: #8aadf4;
+$macchiato-lavender: #b7bdf8;
+
+// Base colors
+$macchiato-base: #24273a;
+$macchiato-mantle: #1e2030;
+$macchiato-crust: #181926;
+
+// Surface colors
+$macchiato-surface0: #363a4f;
+$macchiato-surface1: #494d64;
+$macchiato-surface2: #5b6078;
+
+// Text colors
+$macchiato-text: #cad3f5;
+$macchiato-subtext1: #b8c0e0;
+$macchiato-subtext0: #a5adcb;
+
+// Overlay colors
+$macchiato-overlay0: #6e738d;
+$macchiato-overlay1: #8087a2;
+$macchiato-overlay2: #939ab7;
+
+// CSS Custom Properties for Dark Theme
+:root[data-theme="dark"] {
+  // Base colors
+  --base: #{$macchiato-base};
+  --mantle: #{$macchiato-mantle};
+  --crust: #{$macchiato-crust};
+
+  // Surface
+  --surface0: #{$macchiato-surface0};
+  --surface1: #{$macchiato-surface1};
+  --surface2: #{$macchiato-surface2};
+
+  // Text
+  --text: #{$macchiato-text};
+  --subtext1: #{$macchiato-subtext1};
+  --subtext0: #{$macchiato-subtext0};
+
+  // Overlays
+  --overlay0: #{$macchiato-overlay0};
+  --overlay1: #{$macchiato-overlay1};
+  --overlay2: #{$macchiato-overlay2};
+
+  // Accent colors
+  --rosewater: #{$macchiato-rosewater};
+  --flamingo: #{$macchiato-flamingo};
+  --pink: #{$macchiato-pink};
+  --mauve: #{$macchiato-mauve};
+  --red: #{$macchiato-red};
+  --maroon: #{$macchiato-maroon};
+  --peach: #{$macchiato-peach};
+  --yellow: #{$macchiato-yellow};
+  --green: #{$macchiato-green};
+  --teal: #{$macchiato-teal};
+  --sky: #{$macchiato-sky};
+  --sapphire: #{$macchiato-sapphire};
+  --blue: #{$macchiato-blue};
+  --lavender: #{$macchiato-lavender};
+}

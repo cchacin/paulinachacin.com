@@ -1,0 +1,16 @@
+<!-- Lazy-loaded image component -->
+{% if include.src %}
+<img
+  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 {{ include.width | default: 800 }} {{ include.height | default: 600 }}'%3E%3C/svg%3E"
+  data-src="{{ include.src }}"
+  alt="{{ include.alt | default: 'Image' }}"
+  class="lazy-image{% if include.class %} {{ include.class }}{% endif %}"
+  loading="lazy"
+  width="{{ include.width | default: 800 }}"
+  height="{{ include.height | default: 600 }}"
+  style="background: var(--surface0);"
+>
+<noscript>
+  <img src="{{ include.src }}" alt="{{ include.alt | default: 'Image' }}" width="{{ include.width | default: 800 }}" height="{{ include.height | default: 600 }}">
+</noscript>
+{% endif %}

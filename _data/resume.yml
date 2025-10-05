@@ -1,0 +1,197 @@
+basics:
+  name: "Paullina Chacin"
+  label: "High School Junior"
+  image: "/assets/images/profile-photo.svg"
+  email: "[to be added]"
+  phone: "[to be added]"
+  url: "https://paulinachacin.com"
+  summary: >
+    Dedicated high school junior with a passion for STEM education, community service,
+    and leadership. Actively involved in volunteering, academic competitions, and
+    extracurricular activities while maintaining strong academic performance. Committed
+    to using scientific research and community engagement to address environmental and
+    social challenges.
+  location:
+    city: "[City]"
+    region: "[State]"
+    countryCode: "US"
+  profiles:
+    - network: "LinkedIn"
+      username: "paullina-chacin"
+      url: "[to be added]"
+
+education:
+  - institution: "[High School Name]"
+    area: "General Studies"
+    studyType: "High School Diploma"
+    startDate: "2023-08"
+    endDate: "2026-06"
+    gpa: "[X.XX]"
+    courses:
+      - "AP Biology"
+      - "AP US History"
+      - "Honors English Literature"
+      - "Honors Chemistry"
+      - "Pre-Calculus"
+      - "Spanish III"
+
+volunteer:
+  - organization: "Habitat for Humanity"
+    position: "Volunteer Builder"
+    url: "https://www.habitat.org"
+    startDate: "2024-06"
+    endDate: "Present"
+    summary: "Build affordable housing for families in need through volunteer construction work"
+    highlights:
+      - "Completed 40+ hours of construction work across 5 weekend build sessions"
+      - "Led framing crew of 5 volunteers on two home builds"
+      - "Assisted with electrical wiring and insulation installation under licensed contractor supervision"
+      - "Coordinated tool inventory and safety equipment for volunteer crews"
+    detailPageUrl: "/volunteering/habitat-for-humanity/"
+
+  - organization: "Community Food Bank"
+    position: "Weekly Volunteer"
+    url: ""
+    startDate: "2024-01"
+    endDate: "Present"
+    summary: "Sort and pack food for families experiencing food insecurity"
+    highlights:
+      - "Volunteer 3 hours every Saturday sorting donated food and packing distribution boxes"
+      - "Help serve 100+ families weekly (approximately 1,200 families served total)"
+      - "Contributed 25+ hours of service since January 2024"
+      - "Suggested labeling system improvement that increased warehouse efficiency by 15%"
+    detailPageUrl: "/volunteering/food-bank/"
+
+activities:
+  - organization: "High School Debate Team"
+    position: "Varsity Captain"
+    startDate: "2023-09"
+    endDate: "Present"
+    summary: "Competitive debate team member and student leader"
+    highlights:
+      - "Led team to state semifinals in 2024 season (best result in 5 years)"
+      - "Mentor 3 junior varsity debaters on argumentation, research, and presentation"
+      - "Organize weekly practice sessions and tournament logistics for 25-member team"
+      - "Increased team membership by 40% through recruitment initiatives"
+      - "Personal record: 15 wins, 7 losses across 6 tournaments"
+    detailPageUrl: "/activities/debate-team/"
+
+  - organization: "Environmental Club"
+    position: "Active Member"
+    startDate: "2023-09"
+    endDate: "Present"
+    summary: "Promote sustainability and environmental awareness on campus"
+    highlights:
+      - "Organized campus-wide recycling initiative reaching 500+ students"
+      - "Participate in monthly community clean-up events"
+      - "Coordinate wetland restoration project following science fair research"
+    detailPageUrl: "/activities/environmental-club/"
+
+awards:
+  - title: "Honor Roll"
+    date: "2024-06"
+    awarder: "[High School Name]"
+    summary: "Academic achievement recognition for GPA above 3.5"
+
+  - title: "Regional Science Fair - 1st Place, Biology"
+    date: "2024-03"
+    awarder: "Regional Science Fair Committee"
+    summary: "First place in Biology category for research on wetland biodiversity and urban development impacts"
+    detailPageUrl: "/events/science-fair-2024/"
+
+  - title: "State Science Fair Qualifier"
+    date: "2024-03"
+    awarder: "Regional Science Fair Committee"
+    summary: "Qualified for state-level science fair competition based on regional performance"
+
+  - title: "Student of the Month"
+    date: "2024-03"
+    awarder: "[High School Name]"
+    summary: "Recognized for academic excellence, leadership, and community service contributions"
+
+  - title: "Debate Team - State Semifinals"
+    date: "2024-05"
+    awarder: "State Speech & Debate Association"
+    summary: "Led team to state semifinal round, best performance in 5 years"
+
+skills:
+  - name: "Leadership"
+    level: "Advanced"
+    keywords:
+      - "Team Management"
+      - "Project Coordination"
+      - "Mentorship"
+      - "Public Speaking"
+      - "Event Planning"
+
+  - name: "Communication"
+    level: "Advanced"
+    keywords:
+      - "Public Speaking"
+      - "Written Communication"
+      - "Presentation Skills"
+      - "Debate & Argumentation"
+      - "Active Listening"
+
+  - name: "Research & Analysis"
+    level: "Intermediate"
+    keywords:
+      - "Scientific Research"
+      - "Data Analysis"
+      - "Critical Thinking"
+      - "Literature Review"
+      - "Statistical Analysis"
+
+  - name: "Technical"
+    level: "Intermediate"
+    keywords:
+      - "Microsoft Office Suite"
+      - "Google Workspace"
+      - "Research Databases"
+      - "Presentation Software"
+      - "Data Visualization"
+
+  - name: "Collaboration"
+    level: "Advanced"
+    keywords:
+      - "Teamwork"
+      - "Cross-functional Collaboration"
+      - "Conflict Resolution"
+      - "Community Building"
+
+interests:
+  - name: "STEM Education"
+    keywords:
+      - "Biology"
+      - "Environmental Science"
+      - "Scientific Research"
+      - "Ecology"
+
+  - name: "Community Service"
+    keywords:
+      - "Volunteering"
+      - "Social Justice"
+      - "Community Development"
+      - "Food Security"
+      - "Housing Equity"
+
+  - name: "Public Speaking & Debate"
+    keywords:
+      - "Argumentation"
+      - "Rhetoric"
+      - "Critical Discourse"
+      - "Policy Analysis"
+
+  - name: "Environmental Conservation"
+    keywords:
+      - "Sustainability"
+      - "Climate Action"
+      - "Biodiversity"
+      - "Wetland Ecology"
+      - "Urban Planning"
+
+languages:
+  - language: "English"
+    fluency: "Native"
+  - language: "Spanish"
+    fluency: "Conversational"

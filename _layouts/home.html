@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<article>
+  {{ content }}
+
+  <h2>Featured Highlights</h2>
+
+  <h3>Volunteering</h3>
+  <ul class="collection-list">
+  {% for item in site.volunteering limit:2 %}
+    <li class="collection-item">
+      <h4><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h4>
+      <p class="meta">{{ item.organization }} | {{ item.hours }} hours</p>
+      <p>{{ item.excerpt }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+
+  <h3>Events</h3>
+  <ul class="collection-list">
+  {% for item in site.events limit:2 %}
+    <li class="collection-item">
+      <h4><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h4>
+      <p class="meta">{{ item.date | date: "%B %Y" }} | {{ item.result }}</p>
+      <p>{{ item.excerpt }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+
+  <h3>Activities</h3>
+  <ul class="collection-list">
+  {% for item in site.activities limit:2 %}
+    <li class="collection-item">
+      <h4><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h4>
+      <p class="meta">{{ item.role }}</p>
+      <p>{{ item.excerpt }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+</article>

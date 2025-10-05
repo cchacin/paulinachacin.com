@@ -1,0 +1,153 @@
+---
+layout: default
+---
+<article class="resume">
+  <header>
+    <h1>Resume</h1>
+    <div class="resume-actions">
+      <button class="btn" onclick="window.print();" aria-label="Print or save resume as PDF">📄 Download PDF</button>
+    </div>
+  </header>
+
+  {% assign resume = site.data.resume %}
+
+  <!-- Basics Section -->
+  <section class="resume-section basics">
+    <div class="resume-header-content">
+      {% if resume.basics.image %}
+      <img src="{{ resume.basics.image }}" alt="{{ resume.basics.name }}" class="profile-photo">
+      {% endif %}
+      <div>
+        <h2>{{ resume.basics.name }}</h2>
+        <p class="label">{{ resume.basics.label }}</p>
+        {% if resume.basics.summary %}
+        <p class="summary">{{ resume.basics.summary }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="contact-info">
+      {% if resume.basics.email != '[to be added]' %}
+      <span>📧 {{ resume.basics.email }}</span>
+      {% endif %}
+      {% if resume.basics.phone != '[to be added]' %}
+      <span>📱 {{ resume.basics.phone }}</span>
+      {% endif %}
+      {% if resume.basics.location %}
+      <span>📍 {{ resume.basics.location.city }}, {{ resume.basics.location.region }}</span>
+      {% endif %}
+      {% if resume.basics.url %}
+      <span>🌐 <a href="{{ resume.basics.url }}">{{ resume.basics.url }}</a></span>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  {% if resume.education %}
+  <section class="resume-section education">
+    <h2>🎓 Education</h2>
+    {% for edu in resume.education %}
+    <div class="resume-item">
+      <h3>{{ edu.institution }}</h3>
+      <p class="meta">
+        {{ edu.studyType }}{% if edu.area %} in {{ edu.area }}{% endif %}
+        {% if edu.startDate %} | {{ edu.startDate }} - {{ edu.endDate }}{% endif %}
+        {% if edu.gpa != '[X.XX]' %} | GPA: {{ edu.gpa }}{% endif %}
+      </p>
+      {% if edu.courses %}
+      <p><strong>Relevant Courses:</strong> {{ edu.courses | join: ', ' }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <!-- Volunteer Section -->
+  {% if resume.volunteer %}
+  <section class="resume-section volunteer">
+    <h2>🤝 Volunteer Experience</h2>
+    {% for vol in resume.volunteer %}
+    <div class="resume-item">
+      <h3>
+        {{ vol.position }} - {{ vol.organization }}
+        {% if vol.detailPageUrl %}
+        <a href="{{ vol.detailPageUrl | relative_url }}" class="detail-link">View Details →</a>
+        {% endif %}
+      </h3>
+      <p class="meta">{{ vol.startDate }} - {{ vol.endDate }}</p>
+      {% if vol.summary %}
+      <p>{{ vol.summary }}</p>
+      {% endif %}
+      {% if vol.highlights %}
+      <ul>
+        {% for highlight in vol.highlights %}
+        <li>{{ highlight }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <!-- Awards Section -->
+  {% if resume.awards %}
+  <section class="resume-section awards">
+    <h2>🏆 Awards & Recognition</h2>
+    {% for award in resume.awards %}
+    <div class="resume-item">
+      <h3>
+        {{ award.title }}
+        {% if award.detailPageUrl %}
+        <a href="{{ award.detailPageUrl | relative_url }}" class="detail-link">View Details →</a>
+        {% endif %}
+      </h3>
+      <p class="meta">{{ award.awarder }} | {{ award.date }}</p>
+      {% if award.summary %}
+      <p>{{ award.summary }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <!-- Skills Section -->
+  {% if resume.skills %}
+  <section class="resume-section skills">
+    <h2>💡 Skills & Interests</h2>
+    {% for skill in resume.skills %}
+    <div class="skill-group">
+      <h3>{{ skill.name }}</h3>
+      {% if skill.keywords %}
+      <div class="skill-tags">
+        {% for keyword in skill.keywords %}
+        <span class="skill-tag">{{ keyword }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <!-- Interests Section -->
+  {% if resume.interests %}
+  <section class="resume-section interests">
+    <h2>🌟 Interests</h2>
+    <div class="interests-grid">
+      {% for interest in resume.interests %}
+      <div class="interest-item">
+        <h3>{{ interest.name }}</h3>
+        {% if interest.keywords %}
+        <p>{{ interest.keywords | join: ', ' }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="resume-footer">
+    <p><em>Last updated: {{ site.time | date: "%B %Y" }}</em></p>
+  </div>
+</article>

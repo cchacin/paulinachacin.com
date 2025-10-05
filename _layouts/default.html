@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+
+  <!-- Performance: Resource Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+  <!-- SEO -->
+  {% seo %}
+  {% include seo.html %}
+
+  <!-- Catppuccin Theme CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" media="all">
+  <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
+
+  <!-- Theme Toggle Script (inline for FOUC prevention) -->
+  <script>
+    (function() {
+      const preference = localStorage.getItem('theme-preference') || 'auto';
+      const effectiveTheme = preference === 'auto'
+        ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        : preference;
+      document.documentElement.setAttribute('data-theme', effectiveTheme);
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+  <header>
+    <h1><a href="{{ '/' | relative_url }}" style="text-decoration: none; color: inherit;">{{ site.title }}</a></h1>
+    <nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/volunteering/' | relative_url }}">Volunteering</a>
+        <a href="{{ '/events/' | relative_url }}">Events</a>
+        <a href="{{ '/activities/' | relative_url }}">Activities</a>
+        <a href="{{ '/resume/' | relative_url }}">Resume</a>
+        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme">☀️ Light</button>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+    {{ content }}
+  </main>
+
+  <footer>
+    <span id="copyright">© 2025 Paullina Chacin. All rights reserved.</span>
+  </footer>
+
+  <!-- JavaScript (async for better performance) -->
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/menu-toggle.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/lazy-load.js' | relative_url }}" defer></script>
+</body>
+</html>

@@ -1,55 +1,149 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
+# -----------------------------------------------------------------------------
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# -----------------------------------------------------------------------------
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Paullina Chacin
+first_name: Paullina
+last_name: Chacin
+email: # to be added
+description: >
+  High school junior passionate about STEM education, community service, and leadership.
+  Portfolio showcasing academic achievements, volunteering, and extracurricular activities.
+footer_text: >
+  © 2024 Paullina Chacin. All rights reserved.
+keywords: high-school-portfolio, college-applications, student-portfolio, paullina-chacin
+lang: en
+icon: 🎓
+
+url: https://paulinachacin.com # Update when custom domain is configured
+baseurl: "" # Leave blank for user pages (username.github.io)
+last_updated: false
+
+# -----------------------------------------------------------------------------
+# Theme
+# -----------------------------------------------------------------------------
+
+# Enable dark mode
+enable_darkmode: true
+darkmode_permanent: false # Allow users to toggle
+
+# -----------------------------------------------------------------------------
+# SEO & Social Media
+# -----------------------------------------------------------------------------
+
+# Open Graph / Social Media
+twitter_username: # optional
+og_image: /assets/images/og-image.svg # Social sharing image (1200x630px recommended)
+
+# SEO
+author: Paullina Chacin
+twitter:
+  card: summary_large_image
+social:
+  name: Paullina Chacin
+  links:
+    # - https://linkedin.com/in/your-profile
+    # - https://github.com/your-username
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  volunteering:
+    output: true
+    permalink: /volunteering/:name/
+  events:
+    output: true
+    permalink: /events/:name/
+  activities:
+    output: true
+    permalink: /activities/:name/
+
+# Default values for collections
+defaults:
+  - scope:
+      path: ""
+      type: "volunteering"
+    values:
+      layout: "collection-item"
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "collection-item"
+  - scope:
+      path: ""
+      type: "activities"
+    values:
+      layout: "collection-item"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# -----------------------------------------------------------------------------
+# Jekyll settings
+# -----------------------------------------------------------------------------
 
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Kramdown options
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+# Sass/SCSS options
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Includes / Excludes
+include: ['_pages']
+exclude:
+  - bin/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - LICENSE
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - samples/
+  - docs/
+  - CLAUDE.md
+  - README.md
+
+keep_files:
+  - CNAME
+  - .nojekyll
+
+# Plugins
+plugins:
+  - jekyll-email-protect
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jemoji
+
+# -----------------------------------------------------------------------------
+# Optional Features - All Disabled
+# -----------------------------------------------------------------------------
+
+enable_google_analytics: false
+enable_google_verification: false
+
+# Social media - TO BE ADDED
+linkedin_username: # to be added
+github_username: # optional

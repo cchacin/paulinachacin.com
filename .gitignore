@@ -1,45 +1,205 @@
-# Ignore docs files
-_gh_pages
-_site
+# ============================================================================
+# Jekyll & GitHub Pages
+# ============================================================================
+
+# Jekyll build output
+_site/
+_gh_pages/
+.jekyll-cache/
+.jekyll-metadata
+
+# Sass cache
+.sass-cache/
+
+# Note: Gemfile.lock should be committed for GitHub Pages
+# to ensure consistent dependency versions
+
+
+# ============================================================================
+# Ruby & Bundler
+# ============================================================================
+
+# Ruby version managers
 .ruby-version
-.sass-cache
+.ruby-gemset
 
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.orig
-*.log
-*.rej
-*.swo
-*.swp
-*.zip
-*.vi
-*~
+# Bundler
+.bundle/
+vendor/bundle/
+vendor/cache/
 
-# OS or Editor folders
+# RubyGems
+*.gem
+
+
+# ============================================================================
+# Development Tools
+# ============================================================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Bower
+bower_components/
+
+
+# ============================================================================
+# Operating Systems
+# ============================================================================
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 ._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
 Thumbs.db
-.cache
-.project
-.settings
-.tmproj
-*.esproj
-nbproject
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+# ============================================================================
+# Editors & IDEs
+# ============================================================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# JetBrains IDEs (IntelliJ, RubyMine, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Sublime Text
 *.sublime-project
 *.sublime-workspace
-.idea
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime_session
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+tags
+[._]*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom
+.atom/
 
 # Komodo
 *.komodoproject
 .komodotools
 
-# grunt-html-validation
+
+# ============================================================================
+# Build & Test Files
+# ============================================================================
+
+# Logs
+*.log
+*.err
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.cache
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Validation
 validation-status.json
 validation-report.json
 
-# Folders to ignore
-node_modules
-bower_components
-.jekyll-metadata
-.jekyll-cache
+
+# ============================================================================
+# Project Specific
+# ============================================================================
+
+# Development notes (keep CLAUDE.md for Claude Code)
+# CLAUDE.md is tracked for development instructions
+
+
+# ============================================================================
+# GitHub Pages Specific
+# ============================================================================
+
+# Keep CNAME for custom domain
+!CNAME
+
+# Keep .nojekyll if used
+!.nojekyll
+
+
+# ============================================================================
+# Backup & Archive Files
+# ============================================================================
+
+*.diff
+*.patch
+*.orig
+*.rej
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
